@@ -1,0 +1,57 @@
+// GET
+	request.getParameter("action") // get parameter form form
+// --GET
+
+// REDIRECTS
+	
+	servlet/page.html{
+		response.sendRedirect("main.html"); // redirect + /page -> servlet/page.html
+	}
+	
+	servlet/{
+		RequestDispatcher dispatcher = request.getRequestDispatcher("error.html");
+		dispatcher.forward(request, response); // redirect - /servlet
+	}
+// --REDIRECTS
+
+// Variables
+
+	<%= error %> - извикване на променлива в html код
+	
+	toString -> error = request.getAttribute("error").toString();
+	
+	UserBean() - (UserBean)session.getAttribute("user"); -> cast to UserBean;
+
+// --Variables
+
+// JSP
+
+	tags{
+		<%= име на променлива %> - ако искаме да изкараме някоя променлива
+		<%@ име на файл %> - ако искаме да инсътнем някой файл
+		<% за java код %>
+	}
+
+// --JSP
+
+// Session
+	HttpSession session = request.getSession();
+	
+	set{
+		session.setAttribute("user", user);
+	}
+
+	get{
+		UserBean user = session.getAttribute("user");
+	}
+
+//--Session
+
+// Error
+
+	NullPointerException - обектът не е иниацилизиран
+
+//
+
+
+// breakpoint video 4:34:54 create method register in servlet
