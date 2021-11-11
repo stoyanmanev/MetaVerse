@@ -1,6 +1,14 @@
 package uni.fmi.masters.beans;
 
 public class UserBean {
+	
+	// CREATE TABLE USER(
+	//	   ID IDENTITY PRIMARY KEY,
+	//	   USERNAME VARCHAR(255) NOT NULL UNIQUE,
+	//	   PASSWORD VARCHAR(32) NOT NULL,
+	//	   EMAIL VARCHAR(255) NOT NULL UNIQUE,
+	//	   AVATAR_LOCATION VARCHAR(255) DEFAULT 'no_image.jpg');
+	
 	private String username;
 	private String password;
 	private String email;
@@ -13,6 +21,11 @@ public class UserBean {
 	public UserBean(String username, String password, String email) {
 		this.username = username;
 		this.password = password;
+		this.email = email;
+	}
+	
+	public UserBean(String username, String email) {
+		this.username = username;
 		this.email = email;
 	}
 
