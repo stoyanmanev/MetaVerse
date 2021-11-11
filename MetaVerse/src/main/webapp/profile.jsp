@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-	    <title>Weather App</title>
+	    <title>Weather Apps</title>
 	
 	    <meta name="apple-mobile-web-app-capable" content="yes">
 	
